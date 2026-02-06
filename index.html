@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leitura de Presença — VMP</title>
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --black: #000;
+      --white: #ffffff;
+      --gray: #cccccc;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+
+    .intro {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--white);
+      margin-bottom: 60px;
+    }
+
+    .question {
+      margin-bottom: 70px;
+    }
+
+    .question h3 {
+      color: var(--gold);
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .option {
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      padding: 14px 22px;
+      cursor: pointer;
+      color: var(--white);
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    .option:hover {
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .option.selected {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .highlight {
+      box-shadow: 0 0 0 2px var(--gold);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta button {
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      border-radius: 999px;
+      padding: 18px 60px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta button:disabled {
+      opacity: 0.85;
+      cursor: default;
+    }
+
+    .cta button:hover:not(:disabled) {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .intro { font-size: 16px; }
+      .question h3 { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="intro">
+    Não há certo ou errado.<br>
+    Essas perguntas apenas revelam como você percebe sua própria presença.<br>
+    Responda com honestidade. Só você verá isso.
+  </div>
+
+  <!-- PERGUNTA 1 -->
+  <div class="question" data-question>
+    <h3>Quando você entra em um ambiente novo, você sente que:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — sua presença é percebida antes de você falar</div>
+      <div class="option"><strong>B</strong> — você precisa se expressar para ser notado</div>
+      <div class="option"><strong>C</strong> — você observa mais do que conduz</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 2 -->
+  <div class="question" data-question>
+    <h3>Em conversas importantes, normalmente:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — as pessoas se orientam naturalmente por você</div>
+      <div class="option"><strong>B</strong> — a atenção varia conforme o que você diz</div>
+      <div class="option"><strong>C</strong> — você sente que poderia ter mais impacto</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 3 -->
+  <div class="question" data-question>
+    <h3>Quando tenta melhorar sua postura social, você costuma:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — ajustar comportamento e linguagem</div>
+      <div class="option"><strong>B</strong> — tentar parecer mais confiante</div>
+      <div class="option"><strong>C</strong> — sentir que algo ainda não encaixa</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 4 -->
+  <div class="question" data-question>
+    <h3>Na sua percepção, presença real vem principalmente de:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — aparência e imagem</div>
+      <div class="option"><strong>B</strong> — técnicas e estratégias sociais</div>
+      <div class="option"><strong>C</strong> — estado interno sustentado</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 5 -->
+  <div class="question" data-question>
+    <h3>Se você pudesse ajustar apenas UMA coisa hoje, seria:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — como as pessoas reagem a você</div>
+      <div class="option"><strong>B</strong> — como você se sente internamente</div>
+      <div class="option"><strong>C</strong> — como o ambiente se organiza ao seu redor</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 6 -->
+  <div class="question" data-question>
+    <h3>Você se sente mais atraído por aprender:</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — técnicas visíveis para chamar atenção</div>
+      <div class="option"><strong>B</strong> — ajustes invisíveis que alteram o campo antes da interação</div>
+    </div>
+  </div>
+
+  <!-- PERGUNTA 7 -->
+  <div class="question" data-question>
+    <h3>Você está pronto para ajustar o que vem antes da voz?</h3>
+    <div class="options">
+      <div class="option"><strong>A</strong> — Sim. Quero iniciar esse ajuste agora.</div>
+      <div class="option"><strong>B</strong> — Quero observar isso com mais clareza antes de avançar.</div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <button id="submitBtn">Acessar o VMP</button>
+  </div>
+
+</div>
+
+<script>
+  const questions = document.querySelectorAll('[data-question]');
+  const button = document.getElementById('submitBtn');
+
+  questions.forEach(q => {
+    const options = q.querySelectorAll('.option');
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        q.classList.remove('highlight');
+      });
+    });
+  });
+
+  button.addEventListener('click', () => {
+    let allAnswered = true;
+    let firstUnanswered = null;
+
+    questions.forEach(q => {
+      if (!q.querySelector('.option.selected')) {
+        allAnswered = false;
+        q.classList.add('highlight');
+        if (!firstUnanswered) firstUnanswered = q;
+      }
+    });
+
+    if (!allAnswered) {
+      firstUnanswered.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // RITUAL DE TRANSIÇÃO (VMP-style)
+    button.innerText = "Ajustando leitura…";
+    button.disabled = true;
+
+    setTimeout(() => {
+      window.location.href = "https://go.pepperpay.com.br/vncnu";
+    }, 1500);
+  });
+</script>
+
+</body>
+  </html>
