@@ -74,13 +74,21 @@
       margin-bottom: 60px;
     }
 
-    /* 🔹 QUIZ */
-    .premium-gray {
-      color: rgba(255,255,255,0.62);
+    /* 🔥 ATIVAÇÃO (CORRIGIDO) */
+    .activation {
+      color: #ffffff;
+      font-size: 11px;
+      margin-bottom: 8px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
     }
 
+    /* 🔹 QUIZ */
     .question {
       margin-bottom: 70px;
+      text-align: center;
     }
 
     .question h3 {
@@ -94,6 +102,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+      align-items: center;
     }
 
     .option {
@@ -104,6 +113,8 @@
       color: var(--white);
       transition: all 0.25s ease;
       user-select: none;
+      width: 100%;
+      max-width: 520px;
     }
 
     .option:hover {
@@ -169,6 +180,7 @@
     @media (max-width: 600px) {
       .headline { font-size: 22px; }
       .intro { font-size: 14px; }
+      .option { max-width: 100%; }
       .cta button { font-size: 14px; padding: 13px 20px; }
     }
 
@@ -201,10 +213,10 @@
     Responda sem pensar muito — sua primeira reação mostra como você realmente é percebido.
   </div>
 
-  <!-- 🔥 QUIZ (INTACTO - NÃO ALTEREI NADA) -->
+  <!-- 🔥 QUIZ (INTACTO) -->
 
-<div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO I</div>
+  <div class="question" data-question>
+    <div class="activation">ATIVAÇÃO I</div>
     <h3>Quando você entra em um ambiente novo, você sente que:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — sua presença é percebida antes de você falar</div>
@@ -214,7 +226,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO II</div>
+    <div class="activation">ATIVAÇÃO II</div>
     <h3>Em conversas importantes, normalmente:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — as pessoas se orientam naturalmente por você</div>
@@ -224,7 +236,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO III</div>
+    <div class="activation">ATIVAÇÃO III</div>
     <h3>Quando tenta melhorar sua postura social, você costuma:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — ajustar comportamento e linguagem</div>
@@ -234,7 +246,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO IV</div>
+    <div class="activation">ATIVAÇÃO IV</div>
     <h3>Na sua percepção, presença real vem principalmente de:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — aparência e imagem</div>
@@ -244,7 +256,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO V</div>
+    <div class="activation">ATIVAÇÃO V</div>
     <h3>Se você pudesse ajustar apenas UMA coisa hoje, seria:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — como as pessoas reagem a você</div>
@@ -254,7 +266,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO VI</div>
+    <div class="activation">ATIVAÇÃO VI</div>
     <h3>Você se sente mais atraído por aprender:</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — técnicas visíveis para chamar atenção</div>
@@ -263,7 +275,7 @@
   </div>
 
   <div class="question" data-question>
-    <div class="premium-gray" style="font-size:11px; margin-bottom:8px; text-align:center; letter-spacing:2px;">ATIVAÇÃO VII</div>
+    <div class="activation">ATIVAÇÃO VII</div>
     <h3>Você está pronto para ajustar o que vem antes da voz?</h3>
     <div class="options">
       <div class="option"><strong>A</strong> — Sim. Quero iniciar esse ajuste agora.</div>
@@ -324,4 +336,4 @@
 </script>
 
 </body>
-        </html>
+      </html>
